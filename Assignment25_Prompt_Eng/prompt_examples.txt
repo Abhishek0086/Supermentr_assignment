@@ -1,0 +1,225 @@
+# Assignment 25: Prompt Engineering - Detailed Examples
+
+## 1. Introduction
+Prompt engineering is the process of designing effective inputs (prompts) to get accurate and useful responses from AI models. A well-structured prompt gives better results than a vague one.
+
+## 2. Objective
+To compare weak and strong prompts and understand how prompt design affects AI output.
+
+## 3. Prompt Comparisons
+
+### A. Resume Generation
+
+#### Weak Prompt:
+"Make my resume"
+
+**Problems:**
+* Too vague
+* No details provided
+* No format specified
+* No context about experience
+* Ambiguous expectations
+
+**Expected Output Quality:** Generic, incomplete, may miss important details
+
+---
+
+#### Strong Prompt:
+"Create a professional resume for a 3rd-year Computer Science student skilled in Python, JavaScript, React, and AWS. Include projects, skills, and internship experience in a clean format."
+
+**Improvements:**
+* Clear role
+* Specific skills
+* Structured output
+* Experience level defined
+* Format specification
+
+**Expected Output Quality:** Targeted, detailed, well-organized
+
+---
+
+### B. Business Idea
+
+#### Weak Prompt:
+"Give me a business idea"
+
+**Problems:**
+* No domain or constraints
+* Generic output
+* No target audience
+* No scalability considerations
+* Vague requirements
+
+**Expected Output Quality:** Generic, may not be actionable
+
+---
+
+#### Strong Prompt:
+"Suggest a unique startup idea in the food industry targeting college students in India, focusing on low cost and high scalability. Include revenue model and competitive advantage."
+
+**Improvements:**
+* Target audience
+* Domain specified
+* Constraints included
+* Geographic focus
+* Additional requirements
+
+**Expected Output Quality:** Specific, actionable, tailored
+
+---
+
+### C. Study Plan
+
+#### Weak Prompt:
+"Make a study plan"
+
+**Problems:**
+* No subject or timeline
+* No skill level mentioned
+* Ambiguous structure
+* No learning objectives
+* Unclear duration
+
+**Expected Output Quality:** Generic, may not match needs
+
+---
+
+#### Strong Prompt:
+"Create a 30-day study plan for learning Python and cloud computing for a beginner, including daily topics and practice tasks."
+
+**Improvements:**
+* Time-bound
+* Subjects defined
+* Structured output
+* Skill level specified
+* Clear components
+
+**Expected Output Quality:** Structured, actionable, tailored
+
+---
+
+## 4. Key Differences
+
+### Weak Prompts:
+* Vague and unclear
+* Missing context
+* No constraints
+* Ambiguous goals
+* Generic output
+
+### Strong Prompts:
+* Specific and detailed
+* Comprehensive context
+* Well-defined constraints
+* Clear objectives
+* Targeted output
+
+---
+
+## 5. Additional Prompt Engineering Examples
+
+### Example 1: Content Writing
+
+**Weak:** "Write an article"
+
+**Strong:** "Write a 1000-word blog post about AI in healthcare for a non-technical audience. Include 3 real-world examples, benefits, and challenges. Use simple language and include a conclusion with future outlook."
+
+---
+
+### Example 2: Code Generation
+
+**Weak:** "Write a function"
+
+**Strong:** "Write a Python function that takes a list of numbers and returns the sum of all even numbers. Include error handling for non-numeric values and add docstring with examples."
+
+---
+
+### Example 3: Marketing Copy
+
+**Weak:** "Create marketing text"
+
+**Strong:** "Create a 150-word marketing copy for a fitness app targeting busy professionals aged 25-40. Highlight time-saving features, health benefits, and include a call-to-action. Use persuasive but professional tone."
+
+---
+
+### Example 4: Project Planning
+
+**Weak:** "Make a project plan"
+
+**Strong:** "Create a 3-month project plan for developing a mobile app with a team of 4 developers. Include milestones, deliverables, resource allocation, and risk management. Format as a Gantt chart outline."
+
+---
+
+### Example 5: Learning Material
+
+**Weak:** "Explain machine learning"
+
+**Strong:** "Explain machine learning concepts for a beginner with no programming background. Use 3 real-world analogies, keep it under 500 words, and include a simple example with step-by-step explanation."
+
+---
+
+## 6. Prompt Engineering Techniques
+
+### Technique 1: Specificity
+Add details about what you want:
+- Who is the audience?
+- What is the purpose?
+- What format do you need?
+- What constraints exist?
+
+### Technique 2: Context Provision
+Explain the background:
+- Why do you need this?
+- What will it be used for?
+- What is the current situation?
+- What are the constraints?
+
+### Technique 3: Format Definition
+Specify the output structure:
+- Bullet points or paragraphs?
+- Length requirements?
+- Specific sections?
+- Visual format?
+
+### Technique 4: Example Provision
+Show what you want:
+- Provide sample outputs
+- Show desired style
+- Clarify expectations
+- Demonstrate format
+
+### Technique 5: Constraint Setting
+Define limitations:
+- Budget or cost
+- Time constraints
+- Audience level
+- Technical requirements
+
+---
+
+## 7. Conclusion
+Prompt engineering plays a crucial role in getting accurate results from AI systems. Well-designed prompts improve output quality and efficiency.
+
+### Key Takeaways:
+1. Specificity matters - vague prompts get vague results
+2. Context helps AI understand your needs
+3. Clear constraints improve relevance
+4. Format specification ensures usable output
+5. Examples guide the AI toward desired results
+
+### Best Practices:
+- Be specific and detailed
+- Provide relevant context
+- Define output format clearly
+- Set constraints and goals
+- Iterate and refine based on results
+- Use examples when possible
+- Ask for reasoning when needed
+
+### Practice Tips:
+- Compare weak and strong prompts
+- Test different phrasings
+- Analyze output quality
+- Refine based on results
+- Share and discuss with others
+- Build a library of effective prompts

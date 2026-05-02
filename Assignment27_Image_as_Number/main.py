@@ -1,59 +1,63 @@
 from PIL import Image
 import numpy as np
 
-# Create a simple image (100x100 pixels with random colors)
-print("=== Creating a Random Image ===")
-image_array = np.random.randint(0, 256, (100, 100, 3), dtype=np.uint8)
-image = Image.fromarray(image_array)
-image.save("random_image.png")
-print("✅ Random image created and saved as 'random_image.png'")
+# First, create a sample image if it doesn't exist
+try:
+    img = Image.open("sample.jpg")
+except FileNotFoundError:
+    print("📌 Creating sample.jpg...")
+    # Create a sample image with gradient
+    sample_array = np.zeros((200, 200, 3), dtype=np.uint8)
+    for i in range(200):
+        for j in range(200):
+            sample_array[i, j] = [i * 1.27, j * 1.27, 128]
+    img = Image.fromarray(sample_array)
+    img.save("sample.jpg")
+    print("✅ sample.jpg created\n")
 
-# Load the image and convert to array
-print("\n=== Loading Image as Array ===")
-loaded_image = Image.open("random_image.png")
-image_data = np.array(loaded_image)
+# Convert to numpy array
+img_array = np.array(img)
 
-print(f"Image shape: {image_data.shape}")
-print(f"Image dtype: {image_data.dtype}")
-print(f"Image size: {loaded_image.size}")
+# -----------------------------
+# BASIC INFO
+# -----------------------------
+print("📌 Image Shape (Height, Width, Channels):", img_array.shape)
+print("📌 Data Type:", img_array.dtype)
 
-# Display pixel values
-print("\n=== First 5x5 Pixel Values (Red Channel) ===")
-print(image_data[:5, :5, 0])
+# -----------------------------
+# PIXEL VALUES
+# -----------------------------
+print("\n📌 Sample Pixel Values (Top-left 3x3 area):")
+print(img_array[:3, :3])
 
-# Image statistics
-print("\n=== Image Statistics ===")
-print(f"Min pixel value: {image_data.min()}")
-print(f"Max pixel value: {image_data.max()}")
-print(f"Mean pixel value: {image_data.mean():.2f}")
-print(f"Std deviation: {image_data.std():.2f}")
+# -----------------------------
+# CHANNEL INFO
+# -----------------------------
+if len(img_array.shape) == 3:
+    print("\n📌 Number of Channels:", img_array.shape[2])
+    print("👉 RGB Channels Explanation:")
+    print("Red channel sample:\n", img_array[:3, :3, 0])
+    print("Green channel sample:\n", img_array[:3, :3, 1])
+    print("Blue channel sample:\n", img_array[:3, :3, 2])
+else:
+    print("\n📌 Grayscale Image (Single Channel)")
 
-# Create a grayscale image
-print("\n=== Creating Grayscale Image ===")
-grayscale_array = np.random.randint(0, 256, (100, 100), dtype=np.uint8)
-grayscale_image = Image.fromarray(grayscale_array, mode='L')
-grayscale_image.save("grayscale_image.png")
-print("✅ Grayscale image created and saved as 'grayscale_image.png'")
+# -----------------------------
+# PIXEL RANGE
+# -----------------------------
+print("\n📌 Pixel Value Range:")
+print("Min:", img_array.min())
+print("Max:", img_array.max())
 
-# Modify image using array operations
-print("\n=== Modifying Image (Brightness) ===")
-brightened = np.clip(image_data * 1.5, 0, 255).astype(np.uint8)
-brightened_image = Image.fromarray(brightened)
-brightened_image.save("brightened_image.png")
-print("✅ Brightened image saved as 'brightened_image.png'")
+# -----------------------------
+# IMAGE SIZE
+# -----------------------------
+height, width = img_array.shape[:2]
+print("\n📌 Image Size:")
+print("Height:", height)
+print("Width:", width)
 
-# Create a gradient image
-print("\n=== Creating Gradient Image ===")
-gradient = np.zeros((100, 100, 3), dtype=np.uint8)
-for i in range(100):
-    gradient[i, :] = [i * 2.55, 128, 255 - i * 2.55]
-gradient_image = Image.fromarray(gradient)
-gradient_image.save("gradient_image.png")
-print("✅ Gradient image saved as 'gradient_image.png'")
-
-print("\n=== Summary ===")
-print("Images are represented as multi-dimensional NumPy arrays:")
-print("- RGB Image: (height, width, 3) - 3 channels for Red, Green, Blue")
-print("- Grayscale Image: (height, width) - single channel")
-print("- Each pixel value ranges from 0-255")
-print("- We can manipulate images by modifying array values")
+# -----------------------------
+# TOTAL PIXELS
+# -----------------------------
+print("\n📌 Total Pixels:", height * width)

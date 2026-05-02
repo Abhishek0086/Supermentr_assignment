@@ -1,7 +1,7 @@
 # Assignment 27: Image as Numbers
 
 ## Overview
-A demonstration of how digital images are represented as numerical arrays using NumPy and Pillow. This assignment shows the fundamental concept that images are just matrices of numbers.
+A comprehensive analysis of how digital images are represented as numerical arrays using NumPy and Pillow. This assignment demonstrates extracting and analyzing image data at the pixel level.
 
 ## What is an Image as Numbers?
 Every digital image is fundamentally a collection of numbers. Each pixel has numerical values representing color intensity:
@@ -11,27 +11,21 @@ Every digital image is fundamentally a collection of numbers. Each pixel has num
 
 ## How It Works
 
-### 1. Image Representation
-```
-RGB Image (100x100):
-Shape: (100, 100, 3)
-- 100 rows (height)
-- 100 columns (width)
-- 3 channels (R, G, B)
-```
+### 1. Image Loading
+- Opens an image file (JPG, PNG, etc.)
+- Converts to NumPy array for analysis
 
-### 2. Pixel Values
+### 2. Image Analysis
+- Extracts shape (height, width, channels)
+- Analyzes pixel values
+- Separates RGB channels
+- Calculates statistics
+
+### 3. Pixel Information
 Each pixel is represented by numbers:
 - Red channel: 0-255
 - Green channel: 0-255
 - Blue channel: 0-255
-
-### 3. Array Operations
-Images can be manipulated using NumPy array operations:
-- Brightness adjustment
-- Color filtering
-- Rotation and flipping
-- Blurring and sharpening
 
 ## Requirements
 - Python 3.x
@@ -50,38 +44,57 @@ python main.py
 
 ## What the Script Does
 
-### 1. Creates Random Image
-- Generates 100x100 pixel image with random colors
-- Saves as `random_image.png`
+### 1. Image Loading
+- Loads `sample.jpg` (creates one if not found)
+- Converts to NumPy array
 
-### 2. Loads and Analyzes
-- Loads image as NumPy array
-- Displays shape, dtype, and size
-- Shows pixel values
+### 2. Basic Information
+- Displays image shape (height, width, channels)
+- Shows data type (uint8)
 
-### 3. Image Statistics
+### 3. Pixel Analysis
+- Shows sample pixel values from top-left 3x3 area
+- Displays raw numerical values
+
+### 4. Channel Separation
+- Extracts Red channel values
+- Extracts Green channel values
+- Extracts Blue channel values
+- Shows individual channel data
+
+### 5. Pixel Range Analysis
 - Minimum pixel value
 - Maximum pixel value
-- Mean pixel value
-- Standard deviation
 
-### 4. Grayscale Image
-- Creates single-channel grayscale image
-- Saves as `grayscale_image.png`
+### 6. Image Dimensions
+- Height in pixels
+- Width in pixels
+- Total pixel count
 
-### 5. Image Modification
-- Brightens image by multiplying pixel values
-- Saves as `brightened_image.png`
-
-### 6. Gradient Image
-- Creates smooth color gradient
-- Saves as `gradient_image.png`
-
-## Output Files
-- `random_image.png` - Random colored image
-- `grayscale_image.png` - Grayscale version
-- `brightened_image.png` - Brightened version
-- `gradient_image.png` - Color gradient
+## Output
+```
+📌 Image Shape (Height, Width, Channels): (200, 200, 3)
+📌 Data Type: uint8
+📌 Sample Pixel Values (Top-left 3x3 area):
+[[[  0   0 128]
+  [  0   1 128]
+  [  0   2 128]]
+ ...
+📌 Number of Channels: 3
+👉 RGB Channels Explanation:
+Red channel sample:
+ [[  0   0   0]
+  [  1   1   1]
+  [  2   2   2]]
+...
+📌 Pixel Value Range:
+Min: 0
+Max: 255
+📌 Image Size:
+Height: 200
+Width: 200
+📌 Total Pixels: 40000
+```
 
 ## Concepts Covered
 - Image representation

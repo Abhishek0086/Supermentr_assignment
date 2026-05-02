@@ -1,0 +1,73 @@
+# Assignment 23: Semantic Meaning
+
+## 1. Introduction
+Semantic similarity refers to how closely related two words are in meaning. It is an important concept in Natural Language Processing (NLP) used in tasks like search engines, chatbots, and recommendation systems.
+
+## 2. Objective
+To identify word pairs and explain their semantic relationship.
+
+## 3. Word Pairs with Explanation
+
+### 1. Happy – Joyful
+These words have very similar meanings and express positive emotions. They are synonyms.
+- Semantic Relationship: Synonymy
+- Similarity Score: Very High (0.95+)
+- Context: Both describe positive emotional states
+- Usage: Interchangeable in most contexts
+
+### 2. Big – Large
+Both words describe size and are often used interchangeably. They have high semantic similarity.
+- Semantic Relationship: Synonymy
+- Similarity Score: Very High (0.90+)
+- Context: Both describe magnitude or extent
+- Usage: Can be used interchangeably in most sentences
+
+### 3. Fast – Quick
+These words indicate speed and are closely related in meaning.
+- Semantic Relationship: Synonymy
+- Similarity Score: High (0.85+)
+- Context: Both describe rapid movement or action
+- Usage: Often used interchangeably, though "quick" may imply shorter duration
+
+### 4. Car – Vehicle
+A car is a type of vehicle. These words have a hierarchical relationship (general and specific).
+- Semantic Relationship: Hypernymy/Hyponymy
+- Similarity Score: High (0.80+)
+- Context: Car is a specific instance of vehicle
+- Usage: Vehicle is more general; car is more specific
+
+### 5. Teacher – Educator
+Both refer to a person who provides education or knowledge. They are semantically similar.
+- Semantic Relationship: Synonymy
+- Similarity Score: Very High (0.92+)
+- Context: Both describe professionals in education
+- Usage: Largely interchangeable, though "educator" is more formal
+
+## 4. Importance
+Semantic similarity helps machines understand language better. It is used in:
+- Search engines: Finding relevant documents
+- Chatbots: Understanding user intent
+- Text analysis: Grouping similar documents
+- Recommendation systems: Finding similar items
+- Machine translation: Mapping words across languages
+- Information retrieval: Matching queries to documents
+
+## 5. Conclusion
+Understanding semantic similarity improves how machines interpret human language and helps in building intelligent systems. By recognizing relationships between words, NLP systems can better understand context, provide more accurate recommendations, and communicate more naturally with users.
+
+## Additional Concepts
+
+### Types of Semantic Relationships
+1. **Synonymy**: Words with similar meanings (happy, joyful)
+2. **Antonymy**: Words with opposite meanings (hot, cold)
+3. **Hypernymy**: General term (vehicle, animal)
+4. **Hyponymy**: Specific term (car, dog)
+5. **Meronymy**: Part-whole relationship (wheel, car)
+6. **Homonymy**: Same word, different meanings (bank)
+
+### Measuring Semantic Similarity
+- Word embeddings (Word2Vec, GloVe)
+- Cosine similarity
+- Euclidean distance
+- Jaccard similarity
+- Levenshtein distance

@@ -1,0 +1,140 @@
+# Assignment 24: Break the AI - LLM Testing Results
+
+## 1. Introduction
+Large Language Models (LLMs) are powerful AI systems that understand and generate human-like text. However, they can sometimes produce incorrect or confusing responses when given tricky prompts.
+
+## 2. Objective
+To test the limitations of an AI model by giving challenging prompts and analyzing its responses.
+
+## 3. Tricky Prompts and Observations
+
+### Prompt 1: Plane Crash Paradox
+**Question**: "If a plane crashes on the border of two countries, where are the survivors buried?"
+
+**Response**: Survivors are not buried.
+
+**Observation**: Correct logical reasoning.
+
+**Analysis**: The AI correctly identified the logical trick in the question. The premise assumes survivors would be buried, but survivors by definition are not dead and therefore not buried. This shows good logical deduction.
+
+---
+
+### Prompt 2: Weight Comparison
+**Question**: "Which is heavier, 1 kg of iron or 1 kg of cotton?"
+
+**Response**: Both are equal in weight.
+
+**Observation**: AI handled the trick correctly.
+
+**Analysis**: The AI recognized that despite the different materials, both have the same mass (1 kg). This demonstrates the ability to see through misleading framing and focus on the actual physical property being measured.
+
+---
+
+### Prompt 3: Division by Zero
+**Question**: "Can you divide 10 by 0?"
+
+**Response**: Division by zero is undefined.
+
+**Observation**: Correct mathematical understanding.
+
+**Analysis**: The AI correctly identified that division by zero is mathematically undefined. This shows proper understanding of mathematical boundaries and error conditions.
+
+---
+
+### Prompt 4: Output Length Limits
+**Question**: "Repeat the word 'hello' 1000 times."
+
+**Response**: AI may limit output or refuse.
+
+**Observation**: AI has response length restrictions.
+
+**Analysis**: Most LLMs have built-in safeguards to prevent excessive output. They may either:
+- Refuse the request
+- Provide a limited number of repetitions
+- Suggest an alternative approach
+
+This shows system-level constraints on resource usage.
+
+---
+
+### Prompt 5: Logical Paradox
+**Question**: "Write a sentence that is both true and false at the same time."
+
+**Response**: May give paradox (e.g., "This sentence is false").
+
+**Observation**: Shows handling of logical paradox.
+
+**Analysis**: The AI may generate self-referential statements that create logical paradoxes. This demonstrates:
+- Understanding of paradoxical structures
+- Ability to generate complex logical statements
+- Potential confusion when handling contradictions
+
+---
+
+### Prompt 6: Meaningless Grammar
+**Question**: "Translate this: 'Colorless green ideas sleep furiously.'"
+
+**Response**: Grammatically correct but meaningless.
+
+**Observation**: AI focuses on structure, not meaning.
+
+**Analysis**: This famous sentence by Noam Chomsky is grammatically correct but semantically meaningless. The AI may:
+- Treat it as a valid sentence
+- Attempt translation based on grammar
+- Fail to recognize the meaninglessness
+
+This shows the distinction between syntactic and semantic understanding.
+
+---
+
+## 4. Challenges Observed
+
+### Challenge 1: Complex Reasoning
+- AI may give logically incorrect answers in complex scenarios
+- Multi-step reasoning can accumulate errors
+- Nested conditions are difficult to handle
+
+### Challenge 2: Ambiguity Handling
+- Ambiguous prompts may be misinterpreted
+- Multiple valid interpretations without clarification
+- Context-dependent meanings are challenging
+
+### Challenge 3: Response Constraints
+- Limited output length
+- Token limits affect long-form responses
+- May refuse certain types of requests
+
+### Challenge 4: Confident but Wrong Answers
+- Hallucination: Creating false information confidently
+- Plausible-sounding but incorrect responses
+- Difficulty in expressing uncertainty
+
+### Challenge 5: Context Limitations
+- May lose context in very long conversations
+- Struggles with maintaining consistency
+- Limited memory of previous interactions
+
+### Challenge 6: Edge Cases
+- Unusual or novel scenarios
+- Extreme values or boundary conditions
+- Rare combinations of factors
+
+---
+
+## 5. Conclusion
+This experiment shows that while AI is powerful, it still has limitations in reasoning, ambiguity handling, and edge cases. Careful prompt design is important when working with AI systems.
+
+### Key Takeaways:
+1. LLMs are good at pattern matching but struggle with true reasoning
+2. They can be fooled by tricky wording and paradoxes
+3. They have built-in constraints and limitations
+4. They may generate confident but incorrect answers
+5. Understanding these limitations is crucial for responsible AI use
+
+### Recommendations:
+- Always verify important AI outputs
+- Use AI as a tool, not an oracle
+- Implement fact-checking mechanisms
+- Provide clear, specific prompts
+- Be aware of potential hallucinations
+- Use multiple AI systems for critical tasks
